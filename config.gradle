@@ -1,0 +1,99 @@
+def supportVersion = "27.0.2"
+def convertergson = '2.2.0'
+def rxBindingVersion = "2.0.0"
+def retrofitVersion = "2.2.0"
+def okHttpVersion = "3.8.0"
+def butterKnifeVersion = "8.8.1"
+def daggerAndAndroid = '2.11'
+def rxandroidVersion = '2.0.1'
+def ossVersion = '2.4.5'
+
+project.ext {
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.2",
+            applicationId    : "com.ifeixiu.app.fettler",
+            minSdkVersion    : 18,
+            targetSdkVersion : 27,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    config = [
+            //android-support
+            "support-v4"                   : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7"                 : "com.android.support:appcompat-v7:${supportVersion}",
+            "design"                       : "com.android.support:design:${supportVersion}",
+            "recyclerview-v7"              : "com.android.support:recyclerview-v7:${supportVersion}",
+            "cardview-v7"                  : "com.android.support:cardview-v7:${supportVersion}",
+            "constraint-layout"            : "com.android.support.constraint:constraint-layout:1.0.0-alpha7",
+
+            //java8-support
+            "stream"                       : "com.annimon:stream:1.0.8",
+
+            //rx
+            "rxandroid"                    : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
+            "rxbinding"                    : "com.jakewharton.rxbinding2:rxbinding:${rxBindingVersion}",
+            "rxbinding-support-v4"         : "com.jakewharton.rxbinding2:rxbinding-support-v4:${rxBindingVersion}",
+            "rxbinding-appcompat-v7"       : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${rxBindingVersion}",
+            "rxbinding-design"             : "com.jakewharton.rxbinding2:rxbinding-design:${rxBindingVersion}",
+            "rxbinding-recyclerview-v7"    : "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:${rxBindingVersion}",
+
+            //retrofit
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "adapter-rxjava"               : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            "convertergson"                : "com.squareup.retrofit2:converter-gson:${convertergson}",
+
+            //dagger
+            "dagger"                       : "com.google.dagger:dagger:${daggerAndAndroid}",
+            "dagger-compiler"              : "com.google.dagger:dagger-compiler:${daggerAndAndroid}",
+            //daggerAndroid
+            "daggerAndAndroid"             : "com.google.dagger:dagger-android:${daggerAndAndroid}",
+            "daggerAndAndroid_support"     : "com.google.dagger:dagger-android-support:${daggerAndAndroid}",
+            "dagger-android-processor"     : "com.google.dagger:dagger-android-processor:${daggerAndAndroid}",
+
+            //router
+//            "router"                      : "com.baronzhang.android:router:${routerVersion}",
+//            "router-compiler"             : "com.baronzhang.android:router-compiler:${routerVersion}",
+
+            //butterKnife
+            "butterknife"                  : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+
+            //facebook
+//            "2stetho"                      : "com.facebook.stetho:stetho:${stethoVersion}",
+//            "stetho-okhttp3"              : "com.facebook.stetho:stetho-okhttp3:${stethoVersion}",
+
+            //okHttp3
+            "okhttp3"                      : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            "okhttp3-logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+
+            //others
+//            "ormlite-android"             : "com.j256.ormlite:ormlite-android:5.0",
+            "fastjson"                     : "com.alibaba:fastjson:1.2.31",
+            "retrofit2-fastjson-converter" : "com.github.BaronZ88:Retrofit2-FastJson-Converter:1.2",
+
+            //test
+            "junit"                        : "junit:junit:4.12",
+
+            //阿里oss
+            "oss"                          : "com.aliyun.dpa:oss-android-sdk:${ossVersion}",
+
+            //下拉刷新 加载更多
+            "smarerefresh"                 : "com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7",
+
+            //BaseRecyclerViewAdapterHelper
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
+
+            //searchView
+            "materialsearchview"           : "com.miguelcatalan:materialsearchview:1.4.0",
+            // 图片视频选择器
+            "pictureselector"              : "com.github.LuckSiege.PictureSelector:picture_library:v2.1.7",
+            // 数据库
+            "greendao"                     : "org.greenrobot:greendao:3.2.2",
+
+            "eventbus"                     : "org.greenrobot:eventbus:3.0.0",
+            "numberprogressbar"            : "com.daimajia.numberprogressbar:library:1.4@aar"
+
+    ]
+}
